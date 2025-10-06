@@ -1,0 +1,884 @@
+SQL> @ C:\NRD_L9\scott_emp_dept.sql
+Connected.
+
+User dropped.
+
+
+User created.
+
+
+Grant succeeded.
+
+
+User altered.
+
+Connected.
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+SQL> -- Question #1
+SQL> SELECT MAX(sal), MIN(sal)
+  2  FROM emp;
+
+  MAX(SAL)   MIN(SAL)                                                           
+---------- ----------                                                           
+      5000        800                                                           
+
+SQL> 
+SQL> -- Question #2
+SQL> SELECT deptno, SUM(sal), MAX(sal), MIN(sal)
+  2  FROM  emp
+  3  WHERE job <>'PRESIDENT'
+  4  HAVING MIN(sal) > 1000
+  5  GROUP BY deptno;
+
+    DEPTNO   SUM(SAL)   MAX(SAL)   MIN(SAL)                                     
+---------- ---------- ---------- ----------                                     
+        10       3750       2450       1300                                     
+
+SQL> -- Run script 7clearwater
+SQL> @ C:\NRD_L9\7clearwater.sql
+Connected.
+
+User dropped.
+
+
+User created.
+
+
+Grant succeeded.
+
+
+User altered.
+
+Connected.
+DROP TABLE order_line CASCADE CONSTRAINTS
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+DROP TABLE shipment_line CASCADE CONSTRAINTS
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+DROP TABLE shipment CASCADE CONSTRAINTS
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+DROP TABLE inventory CASCADE CONSTRAINTS
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+DROP TABLE color CASCADE CONSTRAINTS
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+DROP TABLE item CASCADE CONSTRAINTS
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+DROP TABLE category CASCADE CONSTRAINTS
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+DROP TABLE orders CASCADE CONSTRAINTS
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+DROP TABLE order_source CASCADE CONSTRAINTS
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+DROP TABLE customer CASCADE CONSTRAINTS
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+SQL> -- Question #3
+SQL> SELECT item_id, SUM(inv_qoh), MIN(inv_price), MAX(inv_price)
+  2  FROM inventory
+  3  WHERE inv_size IN ('L', 'M')
+  4  HAVING SUM(inv_qoh) > 200
+  5  GROUP BY item_id
+  6  ORDER BY item_id;
+
+   ITEM_ID SUM(INV_QOH) MIN(INV_PRICE) MAX(INV_PRICE)                           
+---------- ------------ -------------- --------------                           
+         3          399          29.95          29.95                           
+         4          591          59.95          59.95                           
+
+SQL> 
+SQL> -- Question #4
+SQL> SELECT item_id, SUM(inv_qoh), MIN(inv_price), MAX(inv_price)
+  2  FROM inventory
+  3  WHERE inv_size IN ('S', NULL)
+  4  HAVING SUM(inv_qoh) > 100
+  5  GROUP BY item_id
+  6  ORDER BY item_id;
+
+   ITEM_ID SUM(INV_QOH) MIN(INV_PRICE) MAX(INV_PRICE)                           
+---------- ------------ -------------- --------------                           
+         1          114         199.95         199.95                           
+         3          289          29.95          29.95                           
+         4          135          59.95          59.95                           
+
+SQL> 
+SQL> -- Question #5
+SQL> SELECT inventory.item_id, SUM(inv_qoh), MIN(inv_price), item.item_desc, MAX(inv_price)
+  2  FROM inventory, item
+  3  WHERE inventory.item_id = item.item_id AND inv_size IN ('S', NULL)
+  4  HAVING SUM(inv_qoh) > 100
+  5  GROUP BY item.item_desc, inventory.item_id
+  6  ORDER BY item_id;
+
+   ITEM_ID SUM(INV_QOH) MIN(INV_PRICE) ITEM_DESC                                
+---------- ------------ -------------- ------------------------------           
+MAX(INV_PRICE)                                                                  
+--------------                                                                  
+         1          114         199.95 Men's Expedition Parka                   
+        199.95                                                                  
+                                                                                
+         3          289          29.95 Women's Hiking Shorts                    
+         29.95                                                                  
+                                                                                
+         4          135          59.95 Women's Fleece Pullover                  
+         59.95                                                                  
+                                                                                
+
+SQL> -- Run script 7Northwoods
+SQL> @ C:\NRD_L9\7Northwoods.sql
+Connected.
+
+User dropped.
+
+
+User created.
+
+
+Grant succeeded.
+
+
+User altered.
+
+Connected.
+DROP TABLE enrollment CASCADE CONSTRAINTS
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+DROP TABLE course_section CASCADE CONSTRAINTS
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+DROP TABLE term CASCADE CONSTRAINTS
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+DROP TABLE course CASCADE CONSTRAINTS
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+DROP TABLE student CASCADE CONSTRAINTS
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+DROP TABLE faculty CASCADE CONSTRAINTS
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+DROP TABLE location CASCADE CONSTRAINTS
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+SQL> -- Question #6
+SQL> SELECT MAX(s_dob) "Youngest", MIN(s_dob) "Oldest"
+  2  FROM student;
+
+Youngest  Oldest                                                                
+--------- ---------                                                             
+04-DEC-86 10-OCT-82                                                             
+
+SQL> 
+SQL> -- Question #7
+SQL> SELECT s_class "Class", MAX(s_dob) "Youngest", MIN(s_dob) "Oldest"
+  2  FROM student
+  3  GROUP BY s_class;
+
+Cl Youngest  Oldest                                                             
+-- --------- ---------                                                          
+SR 19-AUG-85 14-JUL-85                                                          
+SO 20-NOV-86 24-SEP-86                                                          
+FR 04-DEC-86 04-DEC-86                                                          
+JR 10-OCT-82 10-OCT-82                                                          
+
+SQL> SPOOL OFF;
